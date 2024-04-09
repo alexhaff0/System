@@ -27,11 +27,6 @@
 //
 //
 
-function gittest() {
-    console.log('GIT TEST');
-}
-
-
 // ---------------------------------------------------------------------------------------------------------------- //
 // --------------------------------------------- 🟢 INITIALIZE VARS ----------------------------------------------- //
 
@@ -240,9 +235,9 @@ function mapToJSON() {
 // -------------------------------------------------------------------------------------------------------------- //
 // ------------------------------------------ 🟠 FILTER OBJECTS BY TYPE ----------------------------------------- //
 
-function readyObjects() {
+function separateObjectsByType() {
 
-    logFn('readyObjects()');
+    logFn('separateObjectsByType()');
 
     const objectTypes = ['application', 'activity', 'company', 'label', 'role', 'stage'];
     
@@ -713,4 +708,4 @@ function updateObjectMap(transaction) {
 
 // // --------------------------------🟢 FOR TESTING ------------------------------------- //
 
-// module.exports = { jsonToBubbleItem, jsonToBubbleList, logFn, createMap, mapToJSON, readyObjects, objectsToBubble, getItemFromMap, sortObjects, filterApplicants, refreshApplicants, countApplicantsByStage, getAdjacentApplicantIds, getActiveRole, getActiveStages, Transaction, updateObjectMap};
+// module.exports = { jsonToBubbleItem, jsonToBubbleList, logFn, createMap, mapToJSON, separateObjectsByType, objectsToBubble, getItemFromMap, sortObjects, filterApplicants, refreshApplicants, countApplicantsByStage, getAdjacentApplicantIds, getActiveRole, getActiveStages, Transaction, updateObjectMap};
