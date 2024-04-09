@@ -1,0 +1,36 @@
+{
+    "debug": {
+        "functionTriggers": 1,
+        "inputs": {
+
+        },
+        "transactions" : {
+            "queue": 1,
+            "sent": 1
+        },
+        "objects": {
+            "all": 0,
+
+            "stage": 0,
+            "application": 0,
+            "activity": 0,
+            "company": 0,
+            "label": 0,
+            "role": 0
+        },
+        "bubbleObjects": {
+            "stage": 0,
+            "application": 0,
+            "activity": 0,
+            "company": 0,
+            "label": 0,
+            "role": 0
+        },
+        "object": {
+            "getItemFromMap": 0    
+        },
+        "manipulation": {
+            "sortObjects": 0
+        }
+    }
+}
