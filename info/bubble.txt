@@ -22,12 +22,13 @@ properties.sort_criteria
 
 instance.publishState('', varname);
 
-teams
-users
+company
+teams // not yet supported
+users // not yet supported
 roles
 labels
 stages
-locations
+locations // not yet supported
 activity
 applications
 

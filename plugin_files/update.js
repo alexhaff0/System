@@ -17,7 +17,34 @@ if (properties.raw_activity) {
 }
 
 
+// Create Map to use for all functions
+createMap(combinedRawData);
 
+// Create JSON representation of Map to print to console / test
+mapToJSON();
+
+// Separate JSON objects by type
+separateObjectsByType();
+
+console.log("OBJECT POOL AS JSON:");
+console.log(window.systemSyncEngine.objectPool);
+
+objectsToBubble(); // move to very end
+
+console.log("BUBBLE OBJECTS:");
+console.log(window.systemSyncEngine.bubbleObjects);
+console.log(window.systemSyncEngine.bubbleObjects.application);
+
+instance.publishState('company', window.systemSyncEngine.bubbleObjects.company);
+instance.publishState('roles', window.systemSyncEngine.bubbleObjects.role);
+instance.publishState('labels', window.systemSyncEngine.bubbleObjects.label);
+instance.publishState('stages', window.systemSyncEngine.bubbleObjects.stage);
+instance.publishState('activity', window.systemSyncEngine.bubbleObjects.activity);
+instance.publishState('applications', window.systemSyncEngine.bubbleObjects.application);
+
+
+
+refreshApplicants(window.systemSyncEngine.objectPool, properties.filter_criteria, properties.sort_criteria);
 
 
 

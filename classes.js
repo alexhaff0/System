@@ -139,6 +139,8 @@ class Transaction {
             console.error('createTransaction was sent an invalid action type. ', action);
             return;
         }
+
+        this.queue();
     }
 
     queue() {

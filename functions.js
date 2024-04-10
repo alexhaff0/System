@@ -24,9 +24,6 @@
 //
 //
 //
-//
-//
-
 // ---------------------------------------------------------------------------------------------------------------- //
 // --------------------------------------------- 🟢 INITIALIZE VARS ----------------------------------------------- //
 
@@ -107,6 +104,13 @@ function jsonToBubbleList(jsonArray) {
     });
         
     return newArray;
+}
+
+function loadBubbleList(list) {
+    if (!list) return [];
+    if (typeof list.get !== "function") return [];
+    if (typeof list.length !== "function") return [];
+    return list.get(0, list.length());
 }
 
 // ---------------------------------------------------------------------------------------------------------------- //
@@ -699,10 +703,84 @@ function updateObjectMap(transaction) {
 }
 
 // -------------------------------------------------------------------------------------------------------------- //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// ---------------------------------------------------------------------------------------------------------------- //
+// ----------------------------------------------- 🟠 PROCESS TRANSACTIONS ---------------------------------------- //
 
 
 
+function sendTransactions(transactionIds) {
+    transactionIds.forEach((transactionId) => {
+        const transaction = window.systemSyncEngine.transactions.queue.find(
+            (transaction) => transaction.transaction_id === transactionId
+        );
+        if (transaction) {
+            if (transaction.action === 'create') {
+                transaction.queue();
+            } else {
+                console.error('Invalid action type:', transaction.action);
+            }
+        } else {
+            console.error('Transaction not found:', transactionId);
+        }
+    });
+}
 
+function succeedTransactions(transactionIds) {
+    transactionIds.forEach((transactionId) => {
+        const transaction = window.systemSyncEngine.transactions.queue.find(
+            (transaction) => transaction.transaction_id === transactionId
+        );
+        if (transaction) {
+            if (transaction.action === 'create') {
+                transaction.succeed();
+            } else {
+                console.error('Invalid action type:', transaction.action);
+            }
+        } else {
+            console.error('Transaction not found:', transactionId);
+        }
+    });
+}
+
+// -------------------------------------------------------------------------------------------------------------- //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
