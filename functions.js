@@ -30,7 +30,7 @@
 //
 //
 //
-const versionFunctions = '1.2.11';
+const versionFunctions = '1.2.12';
 console.log("Version (Functions): ", versionFunctions);
 //
 //
@@ -65,12 +65,12 @@ function initSystemSyncEngine() {
       "window.systemSyncEngine.objectMap",
       "window.systemSyncEngine.objectPool",
       "window.systemSyncEngine.objects",
-      "window.systemSyncEngine.bubbleObjects",
-      "window.systemSyncEngine.transactions"
+      "window.systemSyncEngine.bubbleObjects"
     ];
     initVars(varNames);
 
     // INIT ARRAY VARS
+    window.systemSyncEngine.transactions = {};
     window.systemSyncEngine.transactions.queue = [];
     window.systemSyncEngine.transactions.sent = [];
 
@@ -743,6 +743,11 @@ function updateObjectMap(transaction) {
 
 
 function sendTransactions(transactionIds) {
+    if (!window.systemSyncEngine || !window.systemSyncEngine.transactions || !window.systemSyncEngine.transactions.queue) {
+        console.error('Transactions Queue Var not found or undefined.');
+        return;
+    }
+
     if (window.systemSyncEngine.transactions.queue.length === 0) {
         console.log('Queue is empty');
         return;
@@ -765,6 +770,11 @@ function sendTransactions(transactionIds) {
 }
 
 function succeedTransactions(transactionIds) {
+    if (!window.systemSyncEngine || !window.systemSyncEngine.transactions || !window.systemSyncEngine.transactions.sent) {
+        console.log('Transactions Sent Var not found or undefined.');
+        return;
+    }
+
     if (window.systemSyncEngine.transactions.sent.length === 0) {
         console.log('No transactions found in the sent array.');
         return;
