@@ -30,7 +30,7 @@
 //
 //
 //
-const versionFunctions = '1.2.16';
+const versionFunctions = '1.2.17';
 console.log("SYSTEM: Functions installed, version ", versionFunctions);
 //
 //
@@ -305,6 +305,7 @@ function filterObjectsByType(map, objectType) {
 
 function objectsToBubble() {
 
+    // LOG FUNCTION TRIGGER
     logFn('objectsToBubble()');
 
     // CREATE BUBBLE OBJECTS VAR IF EMPTY
@@ -546,7 +547,7 @@ function countApplicantsByStage(filteredStages, allApplicants) {
 // -------------------------------------------------------------------------------------------------------------- //
 // ------------------------------------------- 🟢 GET ADJACENT APPLICANTS --------------------------------------- //
 
-function getAdjacentApplicantIds(objects, activeIndex) {
+function getAdjacentApplicants(objects, activeIndex) {
 
     // LOG FUNCTION TRIGGER
     logFn('getAdjacentApplicantIds(' + activeIndex + ')');
@@ -554,9 +555,9 @@ function getAdjacentApplicantIds(objects, activeIndex) {
     const totalApplicants = objects.length;
     const nextIndex = (activeIndex + 1) % totalApplicants;
     const previousIndex = (activeIndex - 1 + totalApplicants) % totalApplicants;
-    const nextApplicantId = objects[nextIndex].id;
-    const previousApplicantId = objects[previousIndex].id;
-    return {previousApplicantId, nextApplicantId};
+    const nextApplicant = objects[nextIndex];
+    const previousApplicant = objects[previousIndex];
+    return {previousApplicant, nextApplicant};
 }
 
 // -------------------------------------------------------------------------------------------------------------- //
@@ -783,4 +784,4 @@ function succeedTransactions(transactionIds) {
 //
 // // --------------------------------🟢 FOR TESTING ------------------------------------- //
 
-// module.exports = { jsonToBubbleItem, jsonToBubbleList, logFn, createMap, mapToJSON, separateObjectsByType, objectsToBubble, getItemFromMap, sortObjects, filterApplicants, refreshApplicants, countApplicantsByStage, getAdjacentApplicantIds, getActiveRole, getActiveStages, Transaction, updateObjectMap};
+// module.exports = { jsonToBubbleItem, jsonToBubbleList, logFn, createMap, mapToJSON, separateObjectsByType, objectsToBubble, getItemFromMap, sortObjects, filterApplicants, refreshApplicants, countApplicantsByStage, getAdjacentApplicants, getActiveRole, getActiveStages, Transaction, updateObjectMap};
