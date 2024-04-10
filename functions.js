@@ -30,8 +30,8 @@
 //
 //
 //
-const versionFunctions = '1.2.17';
-console.log("SYSTEM: Functions installed, version ", versionFunctions);
+const versionFunctions = '1.2.20';
+console.info("SYSTEM: Functions installed, version ", versionFunctions);
 //
 //
 //
@@ -60,15 +60,15 @@ function initSystemSyncEngine() {
 
   // ARRAY OF VARS TO INIT
   const varNames = [
-    "window.systemSyncEngine.settings",
     "window.systemSyncEngine.objectMap",
     "window.systemSyncEngine.objectPool",
     "window.systemSyncEngine.objects",
-    "window.systemSyncEngine.bubbleObjects",
+    "window.systemSyncEngine.bubbleObjects"
   ];
   initVars(varNames);
 
   // INIT ARRAY VARS
+  window.systemSyncEngine.settings = {};
   window.systemSyncEngine.transactions = {};
   window.systemSyncEngine.transactions.queue = [];
   window.systemSyncEngine.transactions.sent = [];
