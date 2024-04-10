@@ -4,8 +4,8 @@
 //
 //
 //
-const versionClasses = '1.2.11';
-console.log("SYSTEM: Classes installed, version ", versionFunctions);
+const versionClasses = '1.2.12';
+console.log("SYSTEM: Classes installed, version ", versionClasses);
 //
 //
 //
