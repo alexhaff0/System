@@ -30,7 +30,7 @@
 //
 //
 //
-const versionFunctions = '1.2.15';
+const versionFunctions = '1.2.16';
 console.log("SYSTEM: Functions installed, version ", versionFunctions);
 //
 //
@@ -263,8 +263,14 @@ function separateObjectsByType() {
 
     const objectTypes = ['application', 'activity', 'company', 'label', 'role', 'stage'];
     
+     // CREATE OBJECTS VAR IF EMPTY
+     if (!window.systemSyncEngine.objects) {
+        window.systemSyncEngine.objects = {};
+    }
+
     for (let i = 0; i < objectTypes.length; i++) {
-        filterObjectsByType(window.systemSyncEngine.objectMap, objectTypes[i]);
+        let results = filterObjectsByType(window.systemSyncEngine.objectMap, objectTypes[i]);
+        window.systemSyncEngine.objects[objectTypes[i]] = results;
     }
 }
 
@@ -274,19 +280,15 @@ function filterObjectsByType(map, objectType) {
     // LOG FUNCTION TRIGGER
     logFn('filterObjectsByType('+ objectType +')');
 
-    // CREATE OBJECTS VAR IF EMPTY
-    if (!window.systemSyncEngine.objects) {
-        window.systemSyncEngine.objects = {};
-    }
-
+    // FILTER & RETURN OBJECTS
     const filteredItems = Array.from(map.values()).filter(item => item.type.toLowerCase() === objectType.toLowerCase());
-    window.systemSyncEngine.objects[objectType] = filteredItems;
+    return filteredItems
 }
 
 // -------------------------------------------------------------------------------------------------------------- //
 //
 //
-//
+// 
 //
 //
 //
@@ -494,45 +496,6 @@ function filterApplicants(allApplicants, filters, sortingCriteria) {
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-// -------------------------------------------------------------------------------------------------------------- //
-// ----------------------------------------------- 🟠 REFRESH APPLICANTS ----------------------------------------- //
-
-function refreshApplicants(applicantsList, filterCriteria, sortingCriteria) {
-
-    // LOG FUNCTION TRIGGER
-    logFn('refreshApplicants()');
-
-    // FILTERED APPLICANTS
-    if (applicantsList.length > 0) {
-        filteredApplicants = filterApplicants(applicantsList, filterCriteria, sortingCriteria);
-    }
-
-    // // CALL COUNT BY STAGE
-    // if (window.systemSyncEngine.allApplicants && window.systemSyncEngine.activeStages && window.systemSyncEngine.allApplicants.length > 0 && window.systemSyncEngine.activeStages.length > 0) {
-    //     const countPerStage = countApplicantsByStage(window.systemSyncEngine.activeStages, window.systemSyncEngine.allApplicants);
-
-    //     window.systemSyncEngine.countPerStage = countPerStage;
-
-    //     if (window.systemSyncEngine.debugMode === true) {
-    //         console.log('Count Per Stage:', countPerStage);
-    //     }
-    // }
-
-}
-
-// -------------------------------------------------------------------------------------------------------------- //
 //
 //
 //
