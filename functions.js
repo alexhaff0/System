@@ -30,7 +30,7 @@
 //
 //
 //
-const versionFunctions = '1.2.10';
+const versionFunctions = '1.2.11';
 console.log("Version (Functions): ", versionFunctions);
 //
 //
@@ -743,6 +743,11 @@ function updateObjectMap(transaction) {
 
 
 function sendTransactions(transactionIds) {
+    if (window.systemSyncEngine.transactions.queue.length === 0) {
+        console.log('Queue is empty');
+        return;
+    }
+    
     transactionIds.forEach((transactionId) => {
         const transaction = window.systemSyncEngine.transactions.queue.find(
             (transaction) => transaction.transaction_id === transactionId
@@ -760,6 +765,11 @@ function sendTransactions(transactionIds) {
 }
 
 function succeedTransactions(transactionIds) {
+    if (window.systemSyncEngine.transactions.sent.length === 0) {
+        console.log('No transactions found in the sent array.');
+        return;
+    }
+
     transactionIds.forEach((transactionId) => {
         const transaction = window.systemSyncEngine.transactions.sent.find(
             (transaction) => transaction.transaction_id === transactionId
