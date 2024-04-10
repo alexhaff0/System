@@ -753,21 +753,21 @@ saveData();
 
 
 
-// // DEBUG LOGGING
-// if (instance.settings.debug.transactions.queue) {console.log("Transactions -- Queue: ", instance.data.transactions.queue);}
-// if (instance.settings.debug.transactions.sent) {console.log("Transactions -- Sent: ", instance.data.transactions.sent);}
+// DEBUG LOGGING
+if (instance.settings.debug.transactions.queue) {console.log("Transactions -- Queue: ", instance.data.transactions.queue);}
+if (instance.settings.debug.transactions.sent) {console.log("Transactions -- Sent: ", instance.data.transactions.sent);}
 
 
 let tempItem = getItemFromMap(7609, 'Application');
 console.log(tempItem);
 
 
-// let myNewTC = new Transaction('create', null, data = {
-//     type: 'stage',
-//     name: 'My new stage',
-//     color: '#000000',
-//     icon: 'fas fa-circle'
-// });
+let myNewTC = new Transaction('create', null, data = {
+    type: 'stage',
+    name: 'My new stage',
+    color: '#000000',
+    icon: 'fas fa-circle'
+});
 
 // TEST UPDATE ITEM
 let myNewTU = new Transaction('update', tempItem, data = {
@@ -790,7 +790,7 @@ updateObjectMap(myNewTD);
 // GET AFTER DELETE
 
 mapToJSON();
-readyObjects();
+separateObjectsByType();
 refreshApplicants(instance.data.objects.application, properties.filterCriteria, properties.sortingCriteria);
 
 objectsToBubble(); // move to very end
@@ -798,16 +798,14 @@ objectsToBubble(); // move to very end
 saveData();
 
 
+myNewTC.queue();
+myNewTU.queue();
+myNewTD.queue();
 
+myNewTC.send();
+myNewTU.send();
 
-// myNewTC.queue();
-// myNewTU.queue();
-// myNewTD.queue();
-
-// myNewTC.send();
-// myNewTU.send();
-
-// myNewTU.succeed();
+myNewTU.succeed();
 
 
 saveData();
