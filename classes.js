@@ -4,7 +4,7 @@
 //
 //
 //
-const versionClasses = '1.2.9';
+const versionClasses = '1.2.10';
 console.log("Version (Classes): ", versionClasses);
 //
 //

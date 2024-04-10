@@ -30,7 +30,7 @@
 //
 //
 //
-const versionFunctions = '1.2.9';
+const versionFunctions = '1.2.10';
 console.log("Version (Functions): ", versionFunctions);
 //
 //
