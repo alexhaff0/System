@@ -776,13 +776,15 @@ let myNewTU = new Transaction('update', tempItem, data = {
     value: 'UPDATED'
 });
 
+let myNewTD = new Transaction('delete', tempItem);
+
 console.log(myNewTU);
 updateObjectMap(myNewTU);
 
 let tempItem2 = getItemFromMap(7609, 'Application');
 
 // TEST DELETE ITEM
-let myNewTD = new Transaction('delete', tempItem);
+
 
 console.log(myNewTD);
 updateObjectMap(myNewTD);

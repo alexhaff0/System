@@ -30,7 +30,7 @@
 //
 //
 //
-const versionFunctions = '1.2.20';
+const versionFunctions = '1.2.21';
 console.info("SYSTEM: Functions installed, version ", versionFunctions);
 //
 //
