@@ -30,8 +30,8 @@
 //
 //
 //
-const version = '1.2.9';
-console.log("Version (Functions): ", version);
+const versionFunctions = '1.2.9';
+console.log("Version (Functions): ", versionFunctions);
 //
 //
 //

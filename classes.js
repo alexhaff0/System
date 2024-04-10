@@ -4,8 +4,8 @@
 //
 //
 //
-const version = '1.2.9';
-console.log("Version (Classes): ", version);
+const versionClasses = '1.2.9';
+console.log("Version (Classes): ", versionClasses);
 //
 //
 //
