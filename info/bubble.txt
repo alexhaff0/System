@@ -1,0 +1,42 @@
+######################
+####### INPUTS #######
+######################
+
+properties.raw_applications
+properties.raw_metadata
+properties.raw_activity
+
+properties.active_role_id
+properties.active_app_index
+
+properties.filter_criteria
+properties.sort_criteria
+
+
+
+
+
+######################
+## PUBLISHABLE VARS ##
+######################
+
+instance.publishState('', varname);
+
+teams
+users
+roles
+labels
+stages
+locations
+activity
+applications
+
+active_role
+active_stages
+
+count_applications
+count_per_stage
+
+active_application
+next_application
+previous_application

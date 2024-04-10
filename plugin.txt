@@ -1,0 +1,64 @@
+# Plugin Objects
+
+----------------------------------
+---------- # Object Pool ---------
+Manages data intake
+
+-> In [Metadata, Roles, ]
+
+Does: Dedupe, Merge, Create Map, Save Map To Var
+
+Out -> [Object Map]
+
+
+-----------------------------------
+----------- # Metadata ------------
+All supporting metadata to render. Triggered by init and updates of metadata and selecting active role.
+
+
+-> In [Active Role ID]
+
+Does: getActiveStages
+
+Out -> [Roles, Teams, Labels, Locations]
+
+
+
+
+
+-----------------------------------
+----------- # List View -----------
+Displays list of applicants and updates on each filter/sort change.
+
+
+-> In [Active Role ID, filters, sorts]
+
+Does: filters & sorts applicants, gets stages, gets count by stage
+
+Out -> [Filtered Applicants, Stages (Filtered), Count By Stage]
+
+
+
+---------------------------------------
+----------- # Detail View -------------
+
+-> In [Active Applicant ID]
+
+
+Out -> [Active Applicant, Prev Applicant, Next Applicant, Additional Activity/Details]
+
+
+
+
+----------------------------------------
+----------- # Transactions -------------
+
+
+
+
+
+
+
+ACCESSIBLE PROPERTIES
+
+init_metadata
