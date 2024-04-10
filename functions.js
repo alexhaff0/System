@@ -30,7 +30,7 @@
 //
 //
 //
-const versionFunctions = '1.2.14';
+const versionFunctions = '1.2.15';
 console.log("SYSTEM: Functions installed, version ", versionFunctions);
 //
 //
@@ -40,48 +40,48 @@ console.log("SYSTEM: Functions installed, version ", versionFunctions);
 // --------------------------------------------- 🟢 INITIALIZE VARS ----------------------------------------------- //
 
 function initSystemSyncEngine() {
+  // INIT WINDOW IF UNDEFINED
+  if (typeof window !== "undefined") {
+    window.systemSyncEngine = window.systemSyncEngine || {};
+  } else {
+    console.error("Window is not defined");
+    let window = {};
+    window.systemSyncEngine = window.systemSyncEngine || {};
+  }
 
-    // INIT WINDOW IF UNDEFINED
-    if (typeof window !== 'undefined') {
-        window.systemSyncEngine = window.systemSyncEngine || {};
-    } else {
-        console.error('Window is not defined');
-        let window = {};
-        window.systemSyncEngine = window.systemSyncEngine || {};
-    }
+  // INIT VARS BY LOOP
+  function initVars(varNames) {
+    varNames.forEach((varName) => {
+      if (typeof window[varName] === "undefined") {
+        window[varName] = null;
+      }
+    });
+  }
 
-    // INIT VARS BY LOOP
-    function initVars(varNames) {
-        varNames.forEach(varName => {
-            if (typeof window[varName] === 'undefined') {
-                window[varName] = null;
-            }
-        });
-    }
+  // ARRAY OF VARS TO INIT
+  const varNames = [
+    "window.systemSyncEngine.settings",
+    "window.systemSyncEngine.objectMap",
+    "window.systemSyncEngine.objectPool",
+    "window.systemSyncEngine.objects",
+    "window.systemSyncEngine.bubbleObjects",
+  ];
+  initVars(varNames);
 
-    // ARRAY OF VARS TO INIT
-    const varNames = [
-      "window.systemSyncEngine.settings",
-      "window.systemSyncEngine.objectMap",
-      "window.systemSyncEngine.objectPool",
-      "window.systemSyncEngine.objects",
-      "window.systemSyncEngine.bubbleObjects"
-    ];
-    initVars(varNames);
+  // INIT ARRAY VARS
+  window.systemSyncEngine.transactions = {};
+  window.systemSyncEngine.transactions.queue = [];
+  window.systemSyncEngine.transactions.sent = [];
 
-    // INIT ARRAY VARS
-    window.systemSyncEngine.transactions = {};
-    window.systemSyncEngine.transactions.queue = [];
-    window.systemSyncEngine.transactions.sent = [];
-
+  // TEMPORARY DEBUG MODE
+  window.systemSyncEngine.settings.debug = {};
+  window.systemSyncEngine.settings.debug.functionTriggers = true;
 
 }
 
 initSystemSyncEngine();
 
-// TEMPORARY DEBUG MODE
-window.systemSyncEngine.settings.debug = {};
-window.systemSyncEngine.settings.debug.functionTriggers = true;
+
 //
 //
 //
