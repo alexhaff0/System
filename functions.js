@@ -30,7 +30,7 @@
 //
 //
 //
-const versionFunctions = '1.2.12';
+const versionFunctions = '1.2.13';
 console.log("Version (Functions): ", versionFunctions);
 //
 //
@@ -79,6 +79,9 @@ function initSystemSyncEngine() {
 
 initSystemSyncEngine();
 
+// TEMPORARY DEBUG MODE
+window.systemSyncEngine.settings.debug = {};
+window.systemSyncEngine.settings.debug.functionTriggers = true;
 //
 //
 //
@@ -87,7 +90,7 @@ initSystemSyncEngine();
 //
 //
 // ---------------------------------------------------------------------------------------------------------------- //
-// --------------------------------------------- 🟢 BUBBLE HELPERS - ---------------------------------------------- //
+// --------------------------------------------- 🟢 BUBBLE HELPERS ------------------------------------------------ //
 
 // For a SINGLE object
 function jsonToBubbleItem(jsonObject) {
@@ -816,9 +819,6 @@ function succeedTransactions(transactionIds) {
 //
 //
 //
-
-
-
 // // --------------------------------🟢 FOR TESTING ------------------------------------- //
 
 // module.exports = { jsonToBubbleItem, jsonToBubbleList, logFn, createMap, mapToJSON, separateObjectsByType, objectsToBubble, getItemFromMap, sortObjects, filterApplicants, refreshApplicants, countApplicantsByStage, getAdjacentApplicantIds, getActiveRole, getActiveStages, Transaction, updateObjectMap};
