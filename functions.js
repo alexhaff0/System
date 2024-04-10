@@ -30,8 +30,8 @@
 //
 //
 //
-const versionFunctions = '1.2.13';
-console.log("Version (Functions): ", versionFunctions);
+const versionFunctions = '1.2.14';
+console.log("SYSTEM: Functions installed, version ", versionFunctions);
 //
 //
 //
@@ -655,8 +655,7 @@ function getActiveStages(role_id) {
     if (role_id) {
 
         // FILTER STAGES
-        
-        let filteredStages = window.systemSyncEngine.objectMap.filter(stage => stage.type === 'stage' && stage.parent_id === role_id);
+        let filteredStages = Array.from(window.systemSyncEngine.objectMap.values()).filter(stage => stage.type === 'stage' && stage.parent_id === role_id);
 
         filteredStages = filteredStages.sort((a, b) => a.sort_order - b.sort_order);
 
