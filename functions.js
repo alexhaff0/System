@@ -54,11 +54,14 @@ function initSystemSyncEngine() {
       "window.systemSyncEngine.objectPool",
       "window.systemSyncEngine.objects",
       "window.systemSyncEngine.bubbleObjects",
-      "window.systemSyncEngine.transactions",
-      "window.systemSyncEngine.transactions.queue",
-      "window.systemSyncEngine.transactions.sent"
+      "window.systemSyncEngine.transactions"
     ];
     initVars(varNames);
+
+    // INIT ARRAY VARS
+    window.systemSyncEngine.transactions.queue = [];
+    window.systemSyncEngine.transactions.sent = [];
+
 
 }
 
@@ -746,7 +749,7 @@ function sendTransactions(transactionIds) {
 
 function succeedTransactions(transactionIds) {
     transactionIds.forEach((transactionId) => {
-        const transaction = window.systemSyncEngine.transactions.queue.find(
+        const transaction = window.systemSyncEngine.transactions.sent.find(
             (transaction) => transaction.transaction_id === transactionId
         );
         if (transaction) {
