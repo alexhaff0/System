@@ -10,7 +10,6 @@ function(instance, properties, context) {
     // GET SELECTED COMMAND
     const selectedID = properties.cmdID;
     const selectedCommand = commands.find(command => command._p_id === selectedID); // SELECTED COMMAND
-
     console.log("👨🏻‍✈️ Selected Command: ", selectedCommand);
 
 
@@ -18,13 +17,17 @@ function(instance, properties, context) {
 
     // --------------------------------- 1️⃣ BASIC ACTION  --------------------------------- //
 
-    if (selectedCommand._p_parameters === false) {
+    if (!selectedCommand._p_parameters) {
       console.log("👨🏻‍✈️ About to run command: ", selectedCommand._p_name);
-      eval(selectedCommand._p_handler + '()');
-      instance.triggerEvent('cmdk_close')
+      let runHandler = selectedCommand._p_handler + '(' + selectedCommand._p_id + ')';
+
+      console.group("Eval Cmd:")
+      console.log(runHandler);
+      console.groupEnd();
+
+      eval(runHandler);
+      instance.triggerEvent('cmdk_close');
     }
-
-
 
 
     // ----------------------------- 2️⃣ ACTION WITH PARAMETERS ---------------------------- //
@@ -64,7 +67,7 @@ function(instance, properties, context) {
           name: item.name,
           id: item.id,
           icon: item.icon,
-          handler: `${selectedCommand._p_handler}(${item.id});`
+          handler: selectedCommand._p_handler
         }));
       
       } else {
@@ -73,7 +76,7 @@ function(instance, properties, context) {
           const formattedCommand = {
             name: i.toString(),
             id: i,
-            handler: `${selectedCommand._p_handler}(${i});`
+            handler: selectedCommand._p_handler
           };
           formattedCommands.push(formattedCommand);
         }
