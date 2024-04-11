@@ -12,7 +12,7 @@
 //
 //
 //
-const versionFunctions = '1.2.22';
+const versionFunctions = '1.2.23';
 console.info("SYSTEM: Functions installed, version ", versionFunctions);
 //
 //
@@ -146,12 +146,12 @@ function logFn(name) {
 // -------------------------------------------------------------------------------------------------------------- //
 // ------------------------------------------ 🟢 LOG TRANSACTION QUEUES ----------------------------------------- //
 
-logTransactionQueues(){
+function logTransactionQueues() {
     console.group("Transactions");
     console.log('Queue', window.systemSyncEngine.transactions.queue);
     console.log('Sent', window.systemSyncEngine.transactions.sent);
     console.groupEnd();
-};
+}
 
 // ---------------------------------------------------------------------------------------------------------------- //
 //
