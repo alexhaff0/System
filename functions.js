@@ -30,7 +30,7 @@
 //
 //
 //
-const versionFunctions = '1.2.21';
+const versionFunctions = '1.2.22';
 console.info("SYSTEM: Functions installed, version ", versionFunctions);
 //
 //
@@ -149,6 +149,27 @@ function logFn(name) {
         console.log("🟢 FUNCTION TRIGGERED: ", name);
     };
 }
+
+// ---------------------------------------------------------------------------------------------------------------- //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// -------------------------------------------------------------------------------------------------------------- //
+// ------------------------------------------ 🟢 LOG TRANSACTION QUEUES ----------------------------------------- //
+
+logTransactionQueues(){
+    console.group("Transactions");
+    console.log('Queue', window.systemSyncEngine.transactions.queue);
+    console.log('Sent', window.systemSyncEngine.transactions.sent);
+    console.groupEnd();
+};
 
 // ---------------------------------------------------------------------------------------------------------------- //
 //

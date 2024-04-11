@@ -2,6 +2,7 @@
 ####### INPUTS #######
 ######################
 
+##### ELEMENT ######
 properties.raw_applications
 properties.raw_metadata
 properties.raw_activity
@@ -11,6 +12,8 @@ properties.active_app_index
 
 properties.filter_criteria
 properties.sort_criteria
+
+##### ACTION:  ######
 
 
 
@@ -41,3 +44,6 @@ count_per_stage
 active_application
 next_application
 previous_application
+
+transactions_queue
+transactions_sent
