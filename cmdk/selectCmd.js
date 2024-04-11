@@ -1,6 +1,6 @@
 function(instance, properties, context) {
 
-    console.log("👨🏻‍✈️ Select Command Called");
+    // console.log("👨🏻‍✈️ Select Command Called");
 
   // ------------------------------------ 0️⃣ GET DATA  ------------------------------------ //
 
@@ -32,7 +32,7 @@ function(instance, properties, context) {
     // PARAMETERS REQUIRED
     if (selectedCommand._p_parameters === true) {
 
-      console.log("👨🏻‍✈️ About to display parameters for: ", selectedCommand._p_name);
+      // console.log("👨🏻‍✈️ About to display parameters for: ", selectedCommand._p_name);
 
 
        //LOAD ANY DATA
@@ -43,7 +43,7 @@ function(instance, properties, context) {
         console.error("Object Map not found by Cmd K menu.");
         return;
       } else if (objectPool) {
-        console.log("👨🏻‍✈️ All Command Objects:", objectPool);
+        // console.log("👨🏻‍✈️ All Command Objects:", objectPool);
       }
 
       // GET THE RELEVANT METADATA
@@ -51,10 +51,14 @@ function(instance, properties, context) {
 
       if (selectedCommand._p_param_type !== 'rating') {
   
-        const relevantObjects = objectPool.filter(item => item.type === selectedCommand._p_param_type);
-  
+        let relevantObjects = objectPool.filter(item => item.type === selectedCommand._p_param_type);
         
-        console.log("👨🏻‍✈️ Relevant Command Objects:", relevantObjects);
+        // IF SELECTED COMMAND'S TYPE IS STAGE, THEN INSTEAD SET RELEVEANT OBJECTS VALUE TO BE WINDOW.SYSTEMSYNCENGINE.OBJECTS.STAGGE
+        if (selectedCommand._p_param_type === 'stage') {
+          relevantObjects = window.systemSyncEngine.objects.stage;
+        }
+        
+        // console.log("👨🏻‍✈️ Relevant Command Objects:", relevantObjects);
   
         formattedCommands = relevantObjects.map(item => ({
           name: item.name,
@@ -77,7 +81,7 @@ function(instance, properties, context) {
       }
   
       // FORMAT THE METADATA AS COMMANDS
-      console.log("👨🏻‍✈️ Formatted Sub-Commands:", formattedCommands);
+      // console.log("👨🏻‍✈️ Formatted Sub-Commands:", formattedCommands);
   
       // CONVERT JSON TO BUBBLE LIST
       const cmdKBUBBLE = jsonToBubbleList(formattedCommands);
@@ -85,7 +89,7 @@ function(instance, properties, context) {
       // SAVE TO INSTANCE DATA
       instance.data.cmdkItems = cmdKBUBBLE;
   
-      console.log("👨🏻‍✈️ Publishable Sub-Commands:", cmdKBUBBLE);
+      // console.log("👨🏻‍✈️ Publishable Sub-Commands:", cmdKBUBBLE);
   
       // PUBLISH VALUE
       instance.publishState("cmd_k_items", instance.data.cmdkItems);
