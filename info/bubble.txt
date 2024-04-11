@@ -13,7 +13,7 @@ properties.active_app_index
 properties.filter_criteria
 properties.sort_criteria
 
-##### ACTION:  ######
+##### ACTION: ######
 
 
 
@@ -47,3 +47,30 @@ previous_application
 
 transactions_queue
 transactions_sent
+
+
+
+
+###########################
+####### GLOBAL VARS #######
+###########################
+
+window.systemSyncEngine.objectPool
+window.systemSyncEngine.objectMap
+
+window.systemSyncEngine.objects.application
+window.systemSyncEngine.objects.activity
+window.systemSyncEngine.objects.company
+window.systemSyncEngine.objects.label
+window.systemSyncEngine.objects.role
+window.systemSyncEngine.objects.stage
+
+window.systemSyncEngine.bubbleObjects.application
+window.systemSyncEngine.bubbleObjects.activity
+window.systemSyncEngine.bubbleObjects.company
+window.systemSyncEngine.bubbleObjects.label
+window.systemSyncEngine.bubbleObjects.role
+window.systemSyncEngine.bubbleObjects.stage
+
+window.systemSyncEngine.transactions.queue
+window.systemSyncEngine.transactions.sent

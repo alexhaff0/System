@@ -43,7 +43,7 @@ function(instance, context) {
         "icon": "",
         "handler": "bubble_fn_cmd_label",
         "parameters": true,
-        "param_type": "tag",
+        "param_type": "label",
         "keybinds": "L",
         "keywords": "category tag note leave write add",
         "requirements": "",
@@ -267,6 +267,7 @@ function(instance, context) {
         "id": 40
       }
     ];
+    
     
     // CONVERT JSON TO BUBBLE LIST
     const cmdKBUBBLE = jsonToBubbleList(cmdKJSON);
