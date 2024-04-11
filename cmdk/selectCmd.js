@@ -2,9 +2,10 @@ function(instance, properties, context) {
 
     console.log("👨🏻‍✈️ Select Command Called");
 
-    // GET SELECTED COMMAND
+    // GET ALL COMMANDS
     const commands = instance.data.cmdkItems;
 
+    // GET SELECTED COMMAND
     const selectedID = properties.cmdID;
     const selectedCommand = commands.find(command => command._p_id === selectedID); // SELECTED COMMAND
 

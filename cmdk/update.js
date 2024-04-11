@@ -1,5 +1,3 @@
-// PLUGIN -> CMD K -> INITIALIZSE
-
 function(instance, context) {
 
     // GET JSON 

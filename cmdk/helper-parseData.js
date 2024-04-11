@@ -36,9 +36,9 @@ const toJSON = JSON.stringify(finalData2);
 try {
   const currentDate = new Date();
   const formattedDate = currentDate.toLocaleString('default', { month: 'short', day: 'numeric' });
-  const fileName = `CmdK Data - ${formattedDate}.json`;
+  const fileName = `cmdk-data.json`;
 
-  const filePath = '/Users/alexhaff/Library/Mobile Documents/com~apple~CloudDocs/My Documents/System/Plugin/👨🏻‍✈️ Cmd K/' + fileName;
+  const filePath = '/Users/alexhaff/Library/Mobile Documents/com~apple~CloudDocs/My Documents/System/system/cmdk/' + fileName;
   fs.writeFileSync(filePath, toJSON);
   console.log('Saved to File');
 } catch (error) {
