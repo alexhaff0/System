@@ -16,11 +16,11 @@ function(instance, properties, context) {
         value: properties.value
     });
     
-    console.group("Transactions");
-    console.log('Queue', window.systemSyncEngine.transactions.queue);
-    console.log('Sent', window.systemSyncEngine.transactions.sent);
-    console.groupEnd();
+    logTransactionQueues();
 
     updateObjectMap(newTransaction);
+
+    instance.publishState("transactions_queue", JSON.stringify(window.systemSyncEngine.transactions.queue));
+    instance.publishState("transactions_sent", JSON.stringify(window.systemSyncEngine.transactions.sent));
 
 }
