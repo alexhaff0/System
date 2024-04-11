@@ -1,0 +1,41 @@
+name,active,icon,handler,parameters,param_type,keybinds,keywords,requirements,parent_id,id
+View,TRUE,,bubble_fn_cmd_view,FALSE,,↵,open see click go,candidate,,1
+Message,FALSE,,,,,,,candidate,,2
+Move to stage...,TRUE,,bubble_fn_cmd_stage,TRUE,stage,M,update status advance progress escalate,,,3
+Change rating...,TRUE,,bubble_fn_cmd_rating,TRUE,rating,R,rate score rank grade,,,4
+Change labels...,TRUE,,bubble_fn_cmd_label,TRUE,tag,L,category tag note leave write add,,,5
+Clear labels,TRUE,,bubble_fn_cmd_label_clear,FALSE,,,clear remove labels tags,,,6
+Mark read,TRUE,,bubble_fn_cmd_markRead,FALSE,,E,seen unseen new old done viewed view,,,7
+Mark unread,TRUE,,bubble_fn_cmd_markUnread,FALSE,,"⇧,E",seen unseen new old done viewed view,,,8
+Favorite candidate,TRUE,,bubble_fn_cmd_favorite,FALSE,,F,star heart bookmark shortlist,,,9
+Unfavorite candidate,TRUE,,bubble_fn_cmd_unfavorite,FALSE,,"⇧,F",star heart bookmark shortlist,,,10
+Share to teammate...,FALSE,,,,,,forward send team assign,,,11
+Copy candidate url,FALSE,,,,,,share link send forward team,,,12
+Comment internally,FALSE,,,,,,note coment leave add write post,,,13
+Edit role,TRUE,,bubble_fn_nav_roleSettings,FALSE,,,edit settings role application form update stages stage set create format modify preferences job post,,,14
+Edit application form,FALSE,,,,,,,,,15
+Change role status...,FALSE,,,,,,,,,16
+Create new role,FALSE,,,,,,,,,17
+Archive role,FALSE,,,,,,,,,18
+Delete role,FALSE,,,,,,,,,19
+Filter...,FALSE,,,,,,,,,20
+Sort...,FALSE,,,,,,,,,21
+Go to next candidate,FALSE,,,,,,,,,22
+Go to previous candidate,FALSE,,,,,,,,,23
+Go to next stage,FALSE,,,,,,,,,24
+Go to previous stage,FALSE,,,,,,,,,25
+Go to stage...,TRUE,,bubble_fn_nav_stage,TRUE,stage,,status jump stages see view process place ,,,26
+Go to roles,FALSE,,,,,,,,,27
+Go to candidates,FALSE,,,,,,,,,28
+Go to settings,TRUE,,bubble_fn_nav_settings,FALSE,,,preferences system setup account,,,29
+Open role...,TRUE,,bubble_fn_nav_role,TRUE,role,,role open go to jump quick job post navigate menu,,,30
+Settings -> Account,TRUE,,bubble_fn_nav_settings_account,FALSE,,,preferences system setup account profile,,,31
+Settings -> Team Members,TRUE,,bubble_fn_nav_settings_team,FALSE,,,team users departments invite access permissions user company preferences system setup account,,,32
+Settings -> Labels,TRUE,,bubble_fn_nav_settings_labels,FALSE,,,labels manage set categories tags label category custom customize workflow setup,,,33
+Settings -> Ratings,TRUE,,bubble_fn_nav_settings_ratings,FALSE,,,ratings score card rate sort filter rank rankings scoring,,,34
+Settings -> Notifications,TRUE,,bubble_fn_nav_settings_notifications,FALSE,,,notifications settings notify alert alerts email emails update updates note,,,35
+Settings -> Subscription,TRUE,,bubble_fn_nav_settings_subscription,FALSE,,,billing account subscription payment plan tier trial term sub credit card bill stripe,,,36
+Invite user,FALSE,,,,,,,,,37
+Keyboard shortcuts,TRUE,,bubble_fn_nav_shortcuts,FALSE,,"⇧,?",keys keybinds shortcuts commands fn function keyboard press enter guide list ,,,38
+Toggle navigation sidebar,TRUE,,bubble_fn_nav_sidebar,FALSE,,,,,,39
+Log out,TRUE,,bubble_fn_nav_logout,FALSE,,,,,,40
