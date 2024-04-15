@@ -29,16 +29,6 @@ function(instance, properties, context) {
         // GET INPUT ROLE ID
         const activeRoleId = window.systemSyncEngine.inputs.active_role_id;
 
-        // GET ACTIVE ROLE & CONVERT TO BUBBLE ITEM
-        const activeRole = jsonToBubbleItem(getActiveRole(activeRoleId));
-
-        // PUBLISH STATE
-        instance.publishState('active_role', activeRole);
-
-        // FILTER TO ACTIVE STAGES
-        window.systemSyncEngine.objects.stage = getActiveStages(activeRoleId);
-
-
         // FILTER & SORT APPLICANTS
         const filterCriteria = JSON.parse(window.systemSyncEngine.inputs.filter_criteria);
         console.log("FILTER CRITERIA: ", filterCriteria);   
@@ -62,33 +52,22 @@ function(instance, properties, context) {
         const count = window.systemSyncEngine.objects.application.length;
         instance.publishState('count_applications', count);
 
-        // COUNT APPLICANTS BY STAGE
-        if (window.systemSyncEngine.objects.application && window.systemSyncEngine.objects.application.length > 0 && window.systemSyncEngine.objects.stage && window.systemSyncEngine.objects.stage.length > 0) {
-            const countPerStage = countApplicantsByStage(window.systemSyncEngine.objects.stage, window.systemSyncEngine.objects.application);
-            instance.publishState('count_per_stage', countPerStage);
-        }
+        // // COUNT APPLICANTS BY STAGE
+        // if (window.systemSyncEngine.objects.application && window.systemSyncEngine.objects.application.length > 0 && window.systemSyncEngine.objects.stage && window.systemSyncEngine.objects.stage.length > 0) {
+        //     const countPerStage = countApplicantsByStage(window.systemSyncEngine.objects.stage, window.systemSyncEngine.objects.application);
+        //     instance.publishState('count_per_stage', countPerStage);
+        // }
         
 }
 
 function publishBubbleObjects() {
     // PUBLISH ALL OBJECTS TO BUBBLE  
     objectsToBubble(); // move to very end
-
-    // if (window.systemSyncEngine.bubbleObjects.company.length > 0) {
-    //     instance.publishState('company', window.systemSyncEngine.bubbleObjects.company);
+  
+    // if (window.systemSyncEngine.bubbleObjects.activity.length > 0) {
+    //     instance.publishState('activity', window.systemSyncEngine.bubbleObjects.activity);
     // }
-    if (window.systemSyncEngine.bubbleObjects.role.length > 0) {
-        instance.publishState('roles', window.systemSyncEngine.bubbleObjects.role);
-    }
-    if (window.systemSyncEngine.bubbleObjects.label.length > 0) {
-        instance.publishState('labels', window.systemSyncEngine.bubbleObjects.label);
-    }
-    if (window.systemSyncEngine.bubbleObjects.stage.length > 0) {
-        instance.publishState('stages', window.systemSyncEngine.bubbleObjects.stage);
-    }
-    if (window.systemSyncEngine.bubbleObjects.activity.length > 0) {
-        instance.publishState('activity', window.systemSyncEngine.bubbleObjects.activity);
-    }
+    
     if (window.systemSyncEngine.bubbleObjects.application.length > 0) {
         instance.publishState('applications', window.systemSyncEngine.bubbleObjects.application);
     }

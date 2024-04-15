@@ -26,7 +26,8 @@ const modifiedData2 = parsedData.data.map(item => {
     id: item.id ? Number(item.id) : null,
     parent_id: item.parent_id ? Number(item.parent_id) : null,
     active: item.active === 'TRUE',
-    parameters: item.parameters === 'TRUE'
+    parameters: item.parameters === 'TRUE',
+    icon: item.icon ? item.icon : null,
   };
 });
 const filteredData2 = modifiedData2.filter(item => item.active);

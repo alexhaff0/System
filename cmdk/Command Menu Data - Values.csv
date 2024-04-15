@@ -1,41 +1,48 @@
-name,active,icon,handler,parameters,param_type,keybinds,keywords,requirements,parent_id,id
-View,TRUE,,bubble_fn_cmd_view,FALSE,,↵,open see click go,candidate,,1
-Message,FALSE,,,,,,,candidate,,2
-Move to stage...,TRUE,,bubble_fn_cmd_stage,TRUE,stage,M,update status advance progress escalate,,,3
-Change rating...,TRUE,,bubble_fn_cmd_rating,TRUE,rating,R,rate score rank grade,,,4
-Change labels...,TRUE,,bubble_fn_cmd_label,TRUE,label,L,category tag note leave write add,,,5
-Clear labels,TRUE,,bubble_fn_cmd_label_clear,FALSE,,,clear remove labels tags,,,6
-Mark read,TRUE,,bubble_fn_cmd_markRead,FALSE,,E,seen unseen new old done viewed view,,,7
-Mark unread,TRUE,,bubble_fn_cmd_markUnread,FALSE,,"⇧,E",seen unseen new old done viewed view,,,8
-Favorite candidate,TRUE,,bubble_fn_cmd_favorite,FALSE,,F,star heart bookmark shortlist,,,9
-Unfavorite candidate,TRUE,,bubble_fn_cmd_unfavorite,FALSE,,"⇧,F",star heart bookmark shortlist,,,10
-Share to teammate...,FALSE,,,,,,forward send team assign,,,11
-Copy candidate url,FALSE,,,,,,share link send forward team,,,12
-Comment internally,FALSE,,,,,,note coment leave add write post,,,13
-Edit role,TRUE,,bubble_fn_nav_roleSettings,FALSE,,,edit settings role application form update stages stage set create format modify preferences job post,,,14
-Edit application form,FALSE,,,,,,,,,15
-Change role status...,FALSE,,,,,,,,,16
-Create new role,FALSE,,,,,,,,,17
-Archive role,FALSE,,,,,,,,,18
-Delete role,FALSE,,,,,,,,,19
-Filter...,FALSE,,,,,,,,,20
-Sort...,FALSE,,,,,,,,,21
-Go to next candidate,FALSE,,,,,,,,,22
-Go to previous candidate,FALSE,,,,,,,,,23
-Go to next stage,FALSE,,,,,,,,,24
-Go to previous stage,FALSE,,,,,,,,,25
-Go to stage...,TRUE,,bubble_fn_nav_stage,TRUE,stage,,status jump stages see view process place ,,,26
-Go to roles,FALSE,,,,,,,,,27
-Go to candidates,FALSE,,,,,,,,,28
-Go to settings,TRUE,,bubble_fn_nav_settings,FALSE,,,preferences system setup account,,,29
-Open role...,TRUE,,bubble_fn_nav_role,TRUE,role,,role open go to jump quick job post navigate menu,,,30
-Settings -> Account,TRUE,,bubble_fn_nav_settings_account,FALSE,,,preferences system setup account profile,,,31
-Settings -> Team Members,TRUE,,bubble_fn_nav_settings_team,FALSE,,,team users departments invite access permissions user company preferences system setup account,,,32
-Settings -> Labels,TRUE,,bubble_fn_nav_settings_labels,FALSE,,,labels manage set categories tags label category custom customize workflow setup,,,33
-Settings -> Ratings,TRUE,,bubble_fn_nav_settings_ratings,FALSE,,,ratings score card rate sort filter rank rankings scoring,,,34
-Settings -> Notifications,TRUE,,bubble_fn_nav_settings_notifications,FALSE,,,notifications settings notify alert alerts email emails update updates note,,,35
-Settings -> Subscription,TRUE,,bubble_fn_nav_settings_subscription,FALSE,,,billing account subscription payment plan tier trial term sub credit card bill stripe,,,36
-Invite user,FALSE,,,,,,,,,37
-Keyboard shortcuts,TRUE,,bubble_fn_nav_shortcuts,FALSE,,"⇧,?",keys keybinds shortcuts commands fn function keyboard press enter guide list ,,,38
-Toggle navigation sidebar,TRUE,,bubble_fn_nav_sidebar,FALSE,,,,,,39
-Log out,TRUE,,bubble_fn_nav_logout,FALSE,,,,,,40
+name,active,icon,handler,parameters,param_type,keybinds,keywords,requirements,parent_id,id,new_id
+View,TRUE,//b41befb7b90e8b58d4a20961cbb0037a.cdn.bubble.io/f1712872477421x386603160124056960/OpenIconGrey700.svg,bubble_fn_cmd_view,FALSE,,↵,open see click go,candidate,,1,view
+Move to stage...,TRUE,//b41befb7b90e8b58d4a20961cbb0037a.cdn.bubble.io/f1712801997327x153428751825837700/StagesIconGrey700.svg,bubble_fn_cmd_stage,TRUE,stage,M,update status advance progress escalate,,,3,stage_set
+Change rating...,TRUE,,bubble_fn_cmd_rating,TRUE,rating,R,rate score rank grade,,,4,rating_set
+Change labels...,TRUE,//b41befb7b90e8b58d4a20961cbb0037a.cdn.bubble.io/f1705019292209x360334688371920260/LabelIconGrey700.svg,bubble_fn_cmd_label,TRUE,label,L,category tag note leave write add,,,5,labels_set
+Clear labels,TRUE,//b41befb7b90e8b58d4a20961cbb0037a.cdn.bubble.io/f1712872480757x611152375528316560/ClearLabelsIconGrey700.svg,bubble_fn_cmd_label_clear,FALSE,,,clear remove labels tags,,,6,labels_clear
+Mark read,TRUE,//b41befb7b90e8b58d4a20961cbb0037a.cdn.bubble.io/f1707797129688x814933895696420500/ReadIconGrey700.svg,bubble_fn_cmd_markRead,FALSE,,E,seen unseen new old done viewed view,,,7,read_true
+Mark unread,TRUE,//b41befb7b90e8b58d4a20961cbb0037a.cdn.bubble.io/f1707797153994x368543886569685300/UnreadIconGrey700.svg,bubble_fn_cmd_markUnread,FALSE,,"⇧,E",seen unseen new old done viewed view,,,8,read_false
+Favorite candidate,TRUE,//b41befb7b90e8b58d4a20961cbb0037a.cdn.bubble.io/f1712872482559x890681224513327500/FavoriteIconGrey700.svg,bubble_fn_cmd_favorite,FALSE,,F,star heart bookmark shortlist,,,9,starred_true
+Unfavorite candidate,TRUE,//b41befb7b90e8b58d4a20961cbb0037a.cdn.bubble.io/f1712872483067x454360660315124500/UnFavoriteIconGrey700.svg,bubble_fn_cmd_unfavorite,FALSE,,"⇧,F",star heart bookmark shortlist,,,10,starred_false
+Share to teammate...,FALSE,//b41befb7b90e8b58d4a20961cbb0037a.cdn.bubble.io/f1712872477042x118263459199972270/ShareIconGrey700.svg,,,,,forward send team assign,,,11,share
+Copy candidate url,FALSE,//b41befb7b90e8b58d4a20961cbb0037a.cdn.bubble.io/f1712872476581x206971573746340450/CopyIconGrey700.svg,,,,,share link send forward team,,,12,copy_url
+Comment internally,FALSE,//b41befb7b90e8b58d4a20961cbb0037a.cdn.bubble.io/f1712872476112x414002371811719200/NoteIconGrey700.svg,,,,,note coment leave add write post,,,13,comment
+Edit role,TRUE,//b41befb7b90e8b58d4a20961cbb0037a.cdn.bubble.io/f1712872480424x157318665230218750/EditRoleIconGrey700.svg,bubble_fn_nav_roleSettings,FALSE,,,edit settings role application form update stages stage set create format modify preferences job post,,,14,role_edit
+Archive role,FALSE,//b41befb7b90e8b58d4a20961cbb0037a.cdn.bubble.io/f1712872475922x605603326994124800/DeleteRoleIconGrey700.svg,,,,,,,,18,role_archive
+Edit application form,FALSE,//b41befb7b90e8b58d4a20961cbb0037a.cdn.bubble.io/f1712872475432x196066167349343140/FormIconGrey700.svg,,,,,,,,15,role_form_edit
+Create new role,FALSE,//b41befb7b90e8b58d4a20961cbb0037a.cdn.bubble.io/f1712872475269x857180336234348800/NewRoleIconGrey700.svg,,,,,,,,17,role_create
+Go to next candidate,FALSE,//b41befb7b90e8b58d4a20961cbb0037a.cdn.bubble.io/f1712872474738x434300715550752100/ApplicantForwardIconGrey700.svg,,,,,,,,22,nav_next_application
+Go to previous candidate,FALSE,//b41befb7b90e8b58d4a20961cbb0037a.cdn.bubble.io/f1712872474513x658073513987455000/ApplicantBackIconGrey700.svg,,,,,,,,23,nav_previous_application
+Go to next stage,FALSE,//b41befb7b90e8b58d4a20961cbb0037a.cdn.bubble.io/f1712872473790x194460107583728450/ForwardIconGrey700.svg,,,,,,,,24,nav_next_stage
+Go to previous stage,FALSE,//b41befb7b90e8b58d4a20961cbb0037a.cdn.bubble.io/f1712872473975x502395625493167600/BackIconGrey700.svg,,,,,,,,25,nav_previous_stage
+Go to stage...,TRUE,//b41befb7b90e8b58d4a20961cbb0037a.cdn.bubble.io/f1712801997327x153428751825837700/StagesIconGrey700.svg,bubble_fn_nav_stage,TRUE,stage,,status jump stages see view process place ,,,26,
+Go to roles,FALSE,//b41befb7b90e8b58d4a20961cbb0037a.cdn.bubble.io/f1712872473274x744142596443046800/RoleIconGrey700.svg,,,,,,,,27,
+Go to candidates,FALSE,//b41befb7b90e8b58d4a20961cbb0037a.cdn.bubble.io/f1712872473019x556155066879189900/ApplicantIconGrey700.svg,,,,,,,,28,
+Go to settings,TRUE,//b41befb7b90e8b58d4a20961cbb0037a.cdn.bubble.io/f1708713562428x892915476043024000/SettingsIconGrey700.svg,bubble_fn_nav_settings,FALSE,,,preferences system setup account,,,29,
+Open role...,TRUE,//b41befb7b90e8b58d4a20961cbb0037a.cdn.bubble.io/f1712872473274x744142596443046800/RoleIconGrey700.svg,bubble_fn_nav_role,TRUE,role,,role open go to jump quick job post navigate menu,,,30,
+Settings -> Account,TRUE,//b41befb7b90e8b58d4a20961cbb0037a.cdn.bubble.io/f1708713562428x892915476043024000/SettingsIconGrey700.svg,bubble_fn_nav_settings_account,FALSE,,,preferences system setup account profile,,,31,
+Settings -> Team Members,TRUE,//b41befb7b90e8b58d4a20961cbb0037a.cdn.bubble.io/f1708713562428x892915476043024000/SettingsIconGrey700.svg,bubble_fn_nav_settings_team,FALSE,,,team users departments invite access permissions user company preferences system setup account,,,32,
+Settings -> Labels,TRUE,//b41befb7b90e8b58d4a20961cbb0037a.cdn.bubble.io/f1708713562428x892915476043024000/SettingsIconGrey700.svg,bubble_fn_nav_settings_labels,FALSE,,,labels manage set categories tags label category custom customize workflow setup,,,33,
+Settings -> Ratings,TRUE,//b41befb7b90e8b58d4a20961cbb0037a.cdn.bubble.io/f1708713562428x892915476043024000/SettingsIconGrey700.svg,bubble_fn_nav_settings_ratings,FALSE,,,ratings score card rate sort filter rank rankings scoring,,,34,
+Settings -> Notifications,TRUE,//b41befb7b90e8b58d4a20961cbb0037a.cdn.bubble.io/f1708713562428x892915476043024000/SettingsIconGrey700.svg,bubble_fn_nav_settings_notifications,FALSE,,,notifications settings notify alert alerts email emails update updates note,,,35,
+Settings -> Subscription,TRUE,//b41befb7b90e8b58d4a20961cbb0037a.cdn.bubble.io/f1708713562428x892915476043024000/SettingsIconGrey700.svg,bubble_fn_nav_settings_subscription,FALSE,,,billing account subscription payment plan tier trial term sub credit card bill stripe,,,36,
+Invite user,FALSE,//b41befb7b90e8b58d4a20961cbb0037a.cdn.bubble.io/f1712872472341x448284742698684700/SendIconGrey700.svg,,,,,,,,37,
+Keyboard shortcuts,TRUE,//b41befb7b90e8b58d4a20961cbb0037a.cdn.bubble.io/f1712872478271x521264853720230460/KeyIconGrey700.svg,bubble_fn_nav_shortcuts,FALSE,,"⇧,?",keys keybinds shortcuts commands fn function keyboard press enter guide list ,,,38,
+Toggle navigation sidebar,TRUE,//b41befb7b90e8b58d4a20961cbb0037a.cdn.bubble.io/f1712872472317x535955598624004350/SidebarIconGrey700.svg,bubble_fn_nav_sidebar,FALSE,,,,,,39,
+Log out,TRUE,,bubble_fn_nav_logout,FALSE,,,,,,40,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+PAUSED INDEFINITELY,,,,,,,,,,,
+Message,FALSE,,,,,,,candidate,,2,
+Delete role,FALSE,,,,,,,,,19,
+Filter...,FALSE,,,,,,,,,20,
+Sort...,FALSE,,,,,,,,,21,
+Change role status...,FALSE,,,,,,,,,16,

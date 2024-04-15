@@ -1,7 +1,7 @@
 [
   {
     "name": "View",
-    "icon": "",
+    "icon": null,
     "handler": "bubble_fn_cmd_view",
     "parameters": false,
     "param_type": "",
@@ -13,7 +13,7 @@
   },
   {
     "name": "Move to stage...",
-    "icon": "",
+    "icon": null,
     "handler": "bubble_fn_cmd_stage",
     "parameters": true,
     "param_type": "stage",
@@ -25,7 +25,7 @@
   },
   {
     "name": "Change rating...",
-    "icon": "",
+    "icon": null,
     "handler": "bubble_fn_cmd_rating",
     "parameters": true,
     "param_type": "rating",
@@ -37,10 +37,10 @@
   },
   {
     "name": "Change labels...",
-    "icon": "",
+    "icon": null,
     "handler": "bubble_fn_cmd_label",
     "parameters": true,
-    "param_type": "label",
+    "param_type": "tag",
     "keybinds": "L",
     "keywords": "category tag note leave write add",
     "requirements": "",
@@ -49,7 +49,7 @@
   },
   {
     "name": "Clear labels",
-    "icon": "",
+    "icon": null,
     "handler": "bubble_fn_cmd_label_clear",
     "parameters": false,
     "param_type": "",
@@ -61,7 +61,7 @@
   },
   {
     "name": "Mark read",
-    "icon": "",
+    "icon": null,
     "handler": "bubble_fn_cmd_markRead",
     "parameters": false,
     "param_type": "",
@@ -73,7 +73,7 @@
   },
   {
     "name": "Mark unread",
-    "icon": "",
+    "icon": null,
     "handler": "bubble_fn_cmd_markUnread",
     "parameters": false,
     "param_type": "",
@@ -85,7 +85,7 @@
   },
   {
     "name": "Favorite candidate",
-    "icon": "",
+    "icon": null,
     "handler": "bubble_fn_cmd_favorite",
     "parameters": false,
     "param_type": "",
@@ -97,7 +97,7 @@
   },
   {
     "name": "Unfavorite candidate",
-    "icon": "",
+    "icon": null,
     "handler": "bubble_fn_cmd_unfavorite",
     "parameters": false,
     "param_type": "",
@@ -109,7 +109,7 @@
   },
   {
     "name": "Edit role",
-    "icon": "",
+    "icon": null,
     "handler": "bubble_fn_nav_roleSettings",
     "parameters": false,
     "param_type": "",
@@ -121,7 +121,7 @@
   },
   {
     "name": "Go to stage...",
-    "icon": "",
+    "icon": null,
     "handler": "bubble_fn_nav_stage",
     "parameters": true,
     "param_type": "stage",
@@ -133,7 +133,7 @@
   },
   {
     "name": "Go to settings",
-    "icon": "",
+    "icon": null,
     "handler": "bubble_fn_nav_settings",
     "parameters": false,
     "param_type": "",
@@ -145,7 +145,7 @@
   },
   {
     "name": "Open role...",
-    "icon": "",
+    "icon": null,
     "handler": "bubble_fn_nav_role",
     "parameters": true,
     "param_type": "role",
@@ -157,7 +157,7 @@
   },
   {
     "name": "Settings -> Account",
-    "icon": "",
+    "icon": null,
     "handler": "bubble_fn_nav_settings_account",
     "parameters": false,
     "param_type": "",
@@ -169,7 +169,7 @@
   },
   {
     "name": "Settings -> Team Members",
-    "icon": "",
+    "icon": null,
     "handler": "bubble_fn_nav_settings_team",
     "parameters": false,
     "param_type": "",
@@ -181,7 +181,7 @@
   },
   {
     "name": "Settings -> Labels",
-    "icon": "",
+    "icon": null,
     "handler": "bubble_fn_nav_settings_labels",
     "parameters": false,
     "param_type": "",
@@ -193,7 +193,7 @@
   },
   {
     "name": "Settings -> Ratings",
-    "icon": "",
+    "icon": null,
     "handler": "bubble_fn_nav_settings_ratings",
     "parameters": false,
     "param_type": "",
@@ -205,7 +205,7 @@
   },
   {
     "name": "Settings -> Notifications",
-    "icon": "",
+    "icon": null,
     "handler": "bubble_fn_nav_settings_notifications",
     "parameters": false,
     "param_type": "",
@@ -217,7 +217,7 @@
   },
   {
     "name": "Settings -> Subscription",
-    "icon": "",
+    "icon": null,
     "handler": "bubble_fn_nav_settings_subscription",
     "parameters": false,
     "param_type": "",
@@ -229,7 +229,7 @@
   },
   {
     "name": "Keyboard shortcuts",
-    "icon": "",
+    "icon": null,
     "handler": "bubble_fn_nav_shortcuts",
     "parameters": false,
     "param_type": "",
@@ -241,7 +241,7 @@
   },
   {
     "name": "Toggle navigation sidebar",
-    "icon": "",
+    "icon": null,
     "handler": "bubble_fn_nav_sidebar",
     "parameters": false,
     "param_type": "",
@@ -253,7 +253,7 @@
   },
   {
     "name": "Log out",
-    "icon": "",
+    "icon": null,
     "handler": "bubble_fn_nav_logout",
     "parameters": false,
     "param_type": "",
